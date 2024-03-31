@@ -1,0 +1,683 @@
+
+/*reset*/
+ *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Anchor*/
+
+a{
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+a:target{
+    color: #fe7467;
+}
+/*config Anchor for mobile 481px*/
+@media screen and (max-width: 481px){
+    a{
+        font-size: 20px;
+    }
+}
+/*Anchor end*/
+textarea{
+    resize: none;
+}
+/*Titles*/
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 33px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.title-white{
+    color: white;
+}
+
+.title-gray{
+    color: #504e50;
+}
+/*config Title for mobile 481px*/
+@media screen and (max-width: 481px){
+    .title{
+        font-size: 20px;
+    }
+}
+
+/*Title end*/
+/*Title Bar styles*/
+
+.title::after{
+    display: block;
+    content: '';
+    width: 120px;
+    height: 6px;
+    margin-top: 18px;
+}
+.title-white::after{
+    background-color: white;
+}
+
+.title-gray::after{
+    background-color: #fe7467;
+}
+
+/*config Bar style for mobile 481px*/
+@media screen and (max-width: 481px){
+    .title::after{
+        width: 85px;
+        height: 4px;
+    }
+}
+
+header{
+    height: 100vh;
+}
+
+.header{
+    background-image: url("../../images/spidermanheader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.header-image-title{
+    width: auto;
+    height: 18rem;
+    position: absolute;
+    left: 10rem;
+    bottom: 9rem;
+}
+
+/*Incio header*/
+@media screen and (max-width: 768px){
+    .header {
+        background-image: url("../../images/spidermanheader_mobile.jpg");
+        background-position: center;
+    }
+
+    .header-image-title{
+        height: 11rem;
+        left: 1rem;
+        bottom: 9rem;
+        position: absolute;
+    }
+
+}
+@media screen and (max-height: 530px){
+
+    .header-image-title{
+        height: 8rem;
+        left: 3rem;
+        bottom: 5rem;
+    }
+
+}
+
+/*Fim header*/
+
+/*Texts*/
+
+.text{
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.text-white{
+    color: white;
+    font-weight: bold;
+}
+
+.text-gray{
+    font-weight: 600;
+    color: #504e50;
+}
+
+.text-black{
+    font-weight: 600;
+    color: black;
+    font-size: 22px;
+}
+
+.text-price{
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/*config text for mobile 481px*/
+@media screen and (max-width: 481px){
+    .text{
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 500;
+    }
+}
+
+/*Texts end*/
+
+/*button*/
+
+.btn{
+    background-image: linear-gradient(#fe7467, #fc3836);
+    color: white;
+    border: none;
+    border-radius: 22px;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-slin{
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+/*config text for mobile 481px*/
+@media screen and (max-width: 481px){
+    .btn{
+
+        border-radius: 18px;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.menu{
+    display: flex;
+    height: 150px;
+    align-items: center;
+}
+
+.menu-logo{
+    width: 180px;
+    margin-left: 30px;
+    margin-right: 5vw;
+}
+
+.menu-logo-image{
+    width: 100%;
+}
+
+.menu-navigation{
+    width: calc(24vw + 150px);
+
+}
+
+.menu-navigation-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.navigation-item{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-bar::after{
+    display: block;
+    content: '';
+    width: 80%;
+    height: 4px;
+    margin-top: 8px;
+    background-color: #fe7467;
+}
+
+/*configuração para mobile mobile 768px*/
+@media screen and (max-width: 768px) {
+
+    .menu{
+        flex-direction: column;
+        height: 30vh;
+        justify-content: space-around;
+    }
+
+    .menu-logo{
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    .menu-navigation{
+        width: 100vw;
+    }
+
+}
+
+.catalog{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+.catalog-title{
+    margin-top: 25px;
+}
+
+.catalog-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.catalog-img{
+    max-width: 50vw;
+    object-fit: contain;
+}
+
+.catalog-content{
+    display: flex;
+    flex-direction: column;
+}
+.catalog-text{
+    padding: 12vh 5vw 0 3vw;
+}
+
+.catalog-content .btn-catalog{
+    margin: 35px 3vw;
+    padding: 20px;
+
+}
+
+/*config about for tablet 768px*/
+@media screen and (max-width: 768px){
+
+
+    .catalog-container{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .catalog-img{
+        max-width: 100vw;
+    }
+}
+
+/*configuração 481px*/
+
+@media screen and (max-width: 481px){
+    .catalog-content .btn-catalog{
+        padding: 15px;
+    }
+
+}
+
+@media screen and (max-height: 530px){
+
+    .catalog-title{
+        font-size: 20px;
+    }
+    .title::after{
+        width: 85px;
+        height: 4px;
+    }
+
+    .catalog-text{
+        font-weight: 500;
+    }
+    .catalog{
+        height: 200vh;
+    }
+}
+
+.about-us{
+    display: grid;
+    grid-template-columns: 50vw auto;
+    grid-template-rows: 200px auto;
+    height: 100vh;
+    background-image: url("../../images/thor_header.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+.title-about{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.about-us-text{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: 0 5vw;
+}
+
+/*Sobre nós*/
+@media screen and (max-width: 768px){
+    .about-us {
+        display: flex;
+        height: 70vh;
+        background-image: linear-gradient(#fe7467, #fc3836);
+    }
+
+    .about-us-text{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .about-us {
+        display: flex;
+        height: 70vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-image: linear-gradient(#fe7467, #fc3836);
+        background-position: center;
+    }
+
+    .about-us-text{
+        padding: 0 12vw;
+    }
+}
+
+@media screen and (max-height: 530px){
+
+    .title-about{
+        font-size: 20px;
+    }
+    .title::after{
+        width: 85px;
+        height: 4px;
+    }
+
+    .about-us-text{
+        font-weight: 500;
+    }
+
+    .about-us{
+        grid-template-rows: 100px auto;
+    }
+
+}
+
+/*Pagina de contato*/
+.contact{
+    padding: 0 18vw;
+    height: 85vh;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+}
+
+.contact-text{
+    text-align: center;
+    margin: 40px 6vw;
+}
+
+.register{
+    display: flex;
+    padding: 25px 0;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.contact-form-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: calc(48vw - 18vw);
+}
+
+.contact-form-input input{
+    border: 2px solid #dcdddd;
+    border-radius: 10px;
+    width: 99%;
+    padding: 15px 0;
+    margin-top: 10px;
+
+}
+.contact-form-input input::placeholder{
+    font-size: medium;
+    text-align: left;
+    padding-left: 3vw;
+    color: #dcdddd;
+}
+.contact-form-text{
+    width: calc(48vw - 18vw);
+}
+
+.contact-form-text textarea{
+    border: 2px solid #dcdddd;
+    margin-top: 10px;
+    width: 98%;
+    height: 86%;
+    border-radius: 15px;
+}
+.contact-form-text textarea::placeholder{
+    padding-top: 15px;
+    text-align: center;
+    font-size: large;
+    color: #dcdddd;
+}
+
+.btn-contact{
+    width: 100%;
+
+}
+
+
+@media screen and (max-width: 768px){
+
+
+}
+
+
+@media screen and (max-width: 481px){
+    .contact{
+        padding: 0 10vw;
+    }
+    .register{
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+    .contact-form-input{
+        width: 100%;
+    }
+    .contact-form-text{
+        width: 100%;
+    }
+}
+
+
+/*Header contato inicio*/
+header{
+    height: 100vh;
+}
+.header{
+    background-image: url("../../images/contatoheader.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+.header-image-title{
+    width: auto;
+    height: 18rem;
+    position: absolute;
+    left: 8rem;
+    bottom: 5rem;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .header-image-title{
+        height: 10em;
+    }
+    .header{
+        background-image: url("../../images/contatoheader_mobile.jpg");
+    }
+}
+
+@media screen and (max-width: 481px){
+
+    .header-image-title{
+        display: none;
+    }
+}
+
+@media screen and (max-height: 530px){
+    .header-image-title{
+        height: 10em;
+    }
+
+}
+
+/*Fim header contato*/
+
+/*Inicio header Catalogo*/
+
+.header{
+    background-image: url("../../images/captainmarvelheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+ }
+
+.header-image-title{
+    width: auto;
+    height: 15rem;
+    position: absolute;
+    left: 8rem;
+    bottom: 3rem;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .header-image-title{
+        height: 9rem;
+        left: 3rem;
+        bottom: 5rem;
+    }
+
+}
+@media screen and (max-width: 481px){
+    .header{
+        background-image: url("../../images/captainmarvelheader_Mobile.jpg");
+        height: 80vh;
+    }
+
+    .header-image-title{
+        display: none;
+    }
+
+}
+
+@media screen and (max-height: 530px){
+
+    .header-image-title{
+        height: 9rem;
+        left: 3rem;
+        bottom: 5rem;
+    }
+
+}
+
+/*Fim header Catalogo*/
+
+
+
+.product-title{
+    padding-top: 30px;
+    margin-bottom: 80px;
+}
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 150vh;
+}
+
+.product-item{
+    width: 30vw;
+}
+
+.product-img{
+    width: 100%;
+}
+
+.product-price{
+     margin-top: 15px;
+}
+
+.product-item button{
+    margin-bottom: 25px;
+}
+.btn-sell{
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+/*config text for mobile 481px*/
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    .product-item{
+        width: 45vw;
+    }
+
+}
+@media screen and (max-width: 481px){
+    .product-title{
+     margin-top: -10px;
+    }
+    .product-item{
+        width: 90vw;
+    }
+
+    .product{
+        margin: 0 20vw;
+    }
+
+}
